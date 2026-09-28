@@ -1,1 +1,72 @@
-# cornea_neovascularisation_morphometrics_analysis
+# Streamlit_Slit_Lamp_Vessel
+
+## Overview
+
+Cornea and neo-corneavascularisation segmentation and morpho-analyses from slit-lamp images
+
+<p align="center">
+<img src="readme_example/pipeline.png" alt="Pipeline" width="400"/>
+</p>
+
+## Streamlit app
+
+We develop an interface with streamlit, an test acces can be accessible via this link : https://6w8d8hjcyf7gtkqrbyjuw4.streamlit.app/
+
+The app can also be run locally (see below).
+
+### Installation
+
+First clone the repository :
+
+```bash
+git clone https://github.com/name_user/Streamlit_Slit_Lamp_Vessel.git
+```
+
+Our streamlit app is compatible with CPU-only environment.
+
+```bash
+cd ++++
+
+# Creation env
+conda create -n slit-lamp-vessel python=3.10
+conda activate slit-lamp-vessel
+pip install -r app/requirements.txt
+
+# To run the app 
+streamlit run app/streamlit_app.py
+```
+
+The app will be available in a localhost. ex : http://localhost:xxxx](http://localhost:xxxx).
+
+### Usage
+
+The streamlit has two parts "single image" and "batch processing". The first one let the user select to use an automatic segmentation (and wich segmentation) or not and then to quantify morphemetrics parameters
+
+<p align="center">
+<img src="readme_example/ex_single_image.png" alt="Single image" width="400"/>
+</p>
+
+If the cornea and vessel mask, you need to run the segmentation before to have the quantification parts. 
+
+The second part, let the user analyses multiples images in ones, at the ends it obtains .zip with the segmentations of all the images and a .csv with the morphetrics results
+
+<p align="center">
+<img src="readme_example/batch.png" alt="Batch images" width="400"/>
+</p>
+
+## Notebook 
+
+(see if i kept this part)
+
+### Installation
+
+## Dataset
+
+(if the dataset will be available)
+
+## Modele Checkpoints
+
+The model checkpoints are available on Zenodo: https://zenodo.org/records/22975963
+The app downloads them automatically.
+##
+
